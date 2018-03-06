@@ -1,0 +1,30 @@
+.button{
+    outline: none;
+    padding: 10px 22px;
+    text-align: center;
+    display: block;
+    width: max-content;
+    border: none;
+}
+
+.button_header{
+    background-color: #267df4;
+    width: 132px;
+    height: 42px;
+    border-radius: 21px;
+    color: #fff;
+    padding: 8px 25px 13px 16px;
+    width: 134px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button_header > span{
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: auto;
+}

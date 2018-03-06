@@ -1,0 +1,144 @@
+.header{
+    padding-top: 43px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    min-height: 87px;
+}
+
+.header__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1167px;
+    margin: 0px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header__logo{
+    background: url("img/logo.png") no-repeat center / cover;
+    width: 140px;
+    height: 13px;
+}
+
+.header__burger{
+    width: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.header__burger-line{
+    height: 2px;
+    background-color: #1b1c1e;
+    margin-bottom: 3px;
+    transition: .5s;
+}
+
+.header__apple{
+    width: 17px;
+    height: 21px;
+    background: url("img/apple-icon.png") no-repeat center / cover;
+}
+
+.header__menu-part{
+    display: flex;
+    justify-content: space-between;
+    width: 273px;
+    align-items: center;
+}
+
+.header__hide-menu{
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 3px 1px 0px #ccc;
+    background-color: #f7f4fe;
+    display: none;
+}
+
+.header__hide-wrapper{
+    display: flex;
+    left: calc(50% - 634px);
+    position: fixed;
+    justify-content: space-around;
+    padding: 34px 0px;
+    width: 980px;
+}
+
+.header__hide-col{
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.header__hide-title{
+    font-weight: 700;
+    color: #26272d;
+    margin-bottom: 15px;
+}
+
+.header__hide-item{
+    color: #26272d;
+    font-weight: 400;
+}
+
+.header__hide-col_mobile{
+    display: none;
+}
+
+.header__burger_open{
+    transition: .5s;
+}
+
+.header__burger_open div:nth-child(1){
+    display: none;
+}
+
+.header__burger_open div:nth-child(2){
+    transform: rotate(135deg);
+}
+
+.header__burger_open div:nth-child(3){
+    transform: rotate(-135deg) translate(4px,4px);
+}
+
+@media screen and (max-width: 1320px){
+    .header__wrapper{
+        justify-content: space-around;
+    }
+    .header__hide-wrapper{
+        width: 90%;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .header__wrapper .link{
+        display: none;
+    }
+    .header__wrapper{
+        justify-content: space-between;
+    }
+    .header__wrapper .button_header{
+        display: none;
+    }
+    .header__menu-part{
+        width: max-content;
+    }
+    .header__hide-col{
+        display: none;
+    }
+    .header__hide-wrapper, .header__hide-col_mobile{
+        width: 100%;
+    }
+    .link_hide-item{
+        text-align: center;
+        width: 100% !important;
+        border-bottom: 1px solid #ccc;
+    }
+    .header__hide-col_mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
